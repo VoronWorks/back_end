@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <meta charset="UTF-8">
         <title>Task 1</title>
       </head>
     <body>
        <h1> Screenshots</h1>
 <ol>
-<li>Logging in to the kubsu-dev server </li>
-<li>
-    <img src="web ping screenshot.png"></br>
-    Using ping command</br>
-    IP-address of kubsu.ru : 185.13.84.92
+<li><img src="putt screenshot.png"></br>
+    <img src="web login screenshot.png"></br>
+    Подключение по SSH к учебному серверу </br>
+При открытии программы Putty происходит SSH-подключение к удаленному серверу kubsu-dev.ru</br>
+Происходит запрос логина и пароля.
 </li>
 <li>
-    <img src="nslookup screenshot.png">
-    Using nslookup command</br>
-    Checking A-records and MX-records of the domains
+    <img src="web login screenshot.png"></br>
+    Работа команды ping</br>
+    При помощи этой команды узнаем IP-адрес веб-сервера kubsu.ru : 185.13.84.92
+    Команда определяет связь между 2 узлами: сервером kubsu.ru и подключенным сервером kubsu-dev.ru
+    с помощью отправки небольших пакетов данных на kubsu.ru и проверяет задержку подключения к серверу
 </li>
 <li>
-    <img src="whois screenshot.png">
-    Using whois command </br>
-    Domains' registration date: 1998-03-28, 2020-02-12
-   
+    <img src="nslookup screenshot.png"></br>
+    Работа команды nslookup</br>
+    При помощи этой команды узнаем A-записи и MX-записи доменов kubsu.ru, kubsu-dev.ru</br>
+    Происходит запрос в домееной системе имен (DNS) с целью получения доменного инмени, IP-адреса или другой информации.</br>
+    A- записи содержат все возможные данные для указанного сервера.</br>
+    MX-записи содержат информацию о почтовых серверах(соответствие доменного имени почтовому серверу этого домена).
 </li>
 <li>
-    <img src="git clone screenshot.png">
-    Cloning github repository to the server </br>
-    
+    <img src="whois screenshot.png"></br>
+    Работа команды whois </br>
+   Даты регистрации: kubsu.ru 1998-03-28, kubsu-dev.ru 2020-02-12</br>
+   Команда показывает дату регистрации домена, информацию владельца домена, расположение и дату истечения срока домена.
 </li>
 <li>
-    <img src="ftp screenshot.png">
-    Connecting using FTP protocol </br>
+    <img src="git clone screenshot.png"></br>
+    Клонирование репозитария на github на сервер в каталог /var/www/html/u52952 при помощи команды git clone</br>
+    Создается каталог c полной копией всех файлов и историей всех коммитов.
+    В каталоге .git хранится сам репозитарий, остальное – файлы рабочей копии проекта.
+
+</li>
+<li>
+    <img src="ftp screenshot.png"></br>
+    Соединение по протоколу FTP с использованием FileZilla и скачивание файлов на локальный компьютер </br>
     
 </li>
 </ol>
