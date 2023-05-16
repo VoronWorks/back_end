@@ -6,7 +6,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/slapform@latest/dist/index.min.js"></script>
   <body style="margin:0;">
-  <a href="/database.php">Данные</a>
     <div style="text-align:center; padding-top:20%">
     <button id="my-button" data-toggle="modal" data-target="#myModal">Форма</button></div>
     <div class="modal fade" id="myModal" >
