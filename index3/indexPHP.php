@@ -26,6 +26,7 @@ if (empty($_POST['field-year']) || !is_numeric($_POST['field-year']) || !preg_ma
   }
 
 if ($errors) {
+  include('form.php');
   exit();
 }
 
