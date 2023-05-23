@@ -16,7 +16,7 @@
 method="POST">
 <label>
     <br />
-    <input required name="field-name"
+    <input  name="field-name"
       value="Имя" />
   </label><br />
 
@@ -73,7 +73,7 @@ method="POST">
           </label><br />
 
           <label><input type="checkbox" checked="checked"
-            name="check-1" />
+            name="check-1" required />
             с контрактом ознакомлен (а)</label><br />
             <input  type="submit" value="Отправить" />
         </form>
