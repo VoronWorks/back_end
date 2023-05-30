@@ -46,7 +46,9 @@ try {
   $id = $db->lastInsertId();
   $stmt = $db->prepare("INSERT INTO connect (s_id, pow_id) VALUES (?,?)");
     foreach ($_POST['abilities'] as $ability) {
-          $stmt->execute([$id, $ability]);
+           $id2 = $db->prepare("SELECT id FROM powers where power = '$ability' ");
+      $id2->execute();
+          $stmt->execute([$id, $id2]);
         }
 }
 catch(PDOException $e){
