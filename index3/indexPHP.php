@@ -43,13 +43,16 @@ try {
   (?,?,?,?,?,?)");
   $stmt -> execute([$_POST['field-name'], $_POST['field-email'], $_POST['field-year'], $_POST['radio-group-1'],
    $_POST['radio-group-2'], $_POST['field-name-2']]);
-  $id = $db->lastInsertId();
-  $stmt = $db->prepare("INSERT INTO connect (s_id, pow_id) VALUES (?,?)");
-    foreach ($_POST['abilities'] as $ability) {
-           $id2 = $db->prepare("SELECT id FROM powers where power = '$ability' ");
-      $id2->execute();
-          $stmt->execute([$id, $id2]);
-        }
+   $id = $db->lastInsertId();
+   $stmt = $db->prepare("SELECT id FROM powers");
+            $stmt->execute();
+            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $db->prepare("INSERT INTO connect (s_id, pow_id) VALUES (?,?)");
+            foreach($res as $ability){
+                if(isset($_POST['abilities'][$ability["id"]-1])){
+                    $stmt->execute([$id, $ability["id"]]);
+                }
+              }
 }
 catch(PDOException $e){
   print('Error : ' . $e->getMessage());
