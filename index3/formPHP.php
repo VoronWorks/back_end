@@ -61,9 +61,9 @@ method="POST">
             <br />
             <select name="abilities[]"
               multiple="multiple">
-              <option value="1" selected="selected"> бессмертие</option>
-              <option value="2" >прохождение сквозь стены</option>
-              <option value="3">левитация</option>
+              <option value="бессмертие" selected="selected"> бессмертие</option>
+              <option value="прохождение сквозь стены" >прохождение сквозь стены</option>
+              <option value="левитация">левитация</option>
             </select>
           </label><br />
 
