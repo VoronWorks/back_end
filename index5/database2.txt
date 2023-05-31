@@ -1,0 +1,13 @@
+ CREATE TABLE user(
+    -> id int(10) unsigned NOT NULL AUTO_INCREMENT,
+    -> user varchar(128) NOT NULL DEFAULT '',
+    -> pass varchar(128) NOT NULL DEFAULT '',
+    -> PRIMARY KEY (id)
+    -> );
+SELECT * FROM user;
++----+--------+----------------------------------+
+| id | user   | pass                             |
++----+--------+----------------------------------+
+|  1 | 100000 | edfd5b77ee404375f15a94e0e1cfe225 |
++----+--------+----------------------------------+
+
