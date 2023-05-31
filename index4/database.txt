@@ -1,0 +1,38 @@
+CREATE TABLE form (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(128) NOT NULL DEFAULT '',
+  email varchar(128) NOT NULL DEFAULT '',
+  year int(4) NOT NULL,
+  gender int(1) NOT NULL ,
+  limbs int(1) NOT NULL ,
+  bio varchar(128) DEFAULT '',
+  PRIMARY KEY (id)
+);
+CREATE TABLE connect (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  s_id int(10) NOT NULL ,
+  pow_id int(10) NOT NULL,
+  PRIMARY KEY (id)
+ FOREIGN KEY (s_id) REFERENCES form(id)
+);
+CREATE TABLE powers (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  power varchar(128) NOT NULL DEFAULT '',
+  PRIMARY KEY (id)
+ FOREIGN KEY (id) REFERENCES connect(pow_id)
+);
+INSERT INTO powers(power)
+VALUES('бессмертие');
+INSERT INTO powers(power)
+VALUES('прохождение сквозь стены');
+INSERT INTO powers(power)
+VALUES('левитация');
+
+ SELECT * FROM powers;
++----+------------------------------------------------+
+| id | power                                          |
++----+------------------------------------------------+
+|  1 | бессмертие                                     |
+|  2 | прохождение сквозь стены                       |
+|  3 | левитация                                      |
++----+------------------------------------------------+
