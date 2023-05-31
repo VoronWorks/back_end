@@ -304,14 +304,14 @@ else {
           $stmt = $db->prepare("INSERT INTO user (user, pass) VALUES (?,?)");
           $stmt -> execute([$login, password_hash($pass, PASSWORD_DEFAULT)]);
           $id = $db->lastInsertId();
-       //   $stmt = $db->prepare("INSERT INTO form (name,email,year,gender,limbs,bio, user_id) VALUES 
-       //   (?,?,?,?,?,?)");
-       //   $stmt -> execute([$_POST['field-name'], $_POST['field-email'], $_POST['field-year'], $_POST['radio-group-1'],
-       //    $_POST['radio-group-2'], $_POST['field-name-2'], $id]);
+          $stmt = $db->prepare("INSERT INTO form (name,email,year,gender,limbs,bio, user_id) VALUES 
+          (?,?,?,?,?,?)");
+          $stmt -> execute([$_POST['field-name'], $_POST['field-email'], $_POST['field-year'], $_POST['radio-group-1'],
+           $_POST['radio-group-2'], $_POST['field-name-2'], $id]);
             $id = $db->lastInsertId();
-         //   $stmt = $db->prepare("SELECT id FROM powers");
-           // $stmt->execute();
-          //  $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt = $db->prepare("SELECT id FROM powers");
+            $stmt->execute();
+            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
  
             $stmt = $db->prepare("INSERT INTO connect (s_id, pow_id) VALUES (?,?)");
             foreach($res as $r){
