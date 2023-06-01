@@ -153,19 +153,19 @@ function msg_declare($messages,$errors, $counter=null){
         $messages[] = '<div class="error">Заполните имя корректно. </div>';
     }
     
-    if ($errors['email']) {
+    if ($errors['field-email']) {
         setcookie('field-email_error'.$counter, '', 100000);
         $messages[] = '<div class="error">Заполните email корректно. <br> Email должен содержать символ "@" </div>';
     }
-    if ($errors['year']) {
+    if ($errors['field-year']) {
         setcookie('field-year_error'.$counter, '', 100000);
         $messages[] = '<div class="error">Заполните дату рождения корректно. <br> Дата рождения должна быть записана в формате день/месяц/год. </div>';
     }
-    if ($errors['gender']) {
+    if ($errors['radio-group-1']) {
         setcookie('radio-group-1_error'.$counter, '', 100000);
         $messages[] = '<div class="error">Укажите пол. </div>';
     }
-    if ($errors['limbs']) {
+    if ($errors['radio-group-2']) {
         setcookie('radio-group-2_error'.$counter, '', 100000);
         $messages[] = '<div class="error">Укажите количество конечностей. </div>';
     }
